@@ -18,18 +18,17 @@ var collectionEmbed = function(target, config) {
   this.loadSDK()
 }
 collectionEmbed.prototype.loadSDK = function(){
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
   var collection = this.config.collection
   var store = this.config.store
   var token = this.config.token
   var target = this.config.target
   var linkTarget="";
-  if(this.openInNewTab == true){
+  if(this.config.openInNewTab == true){
     var linkTarget = "target='_blank'"
   }
 
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-
-  if (window.ShopifyBuy) {
+  if (window.ShopifyBuy){
     if (window.ShopifyBuy.UI){
       ShopifyBuyInit()
     } else {
@@ -48,7 +47,7 @@ collectionEmbed.prototype.loadSDK = function(){
   }
 
   function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({ domain:store,storefrontAccessToken:token});
+    var client = ShopifyBuy.buildClient({domain:store,storefrontAccessToken:token});
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
         id: collection,
