@@ -18,7 +18,7 @@ var collectionEmbed = function(target, config) {
   this.loadSDK()
 }
 collectionEmbed.prototype.loadSDK = function(){
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js'
   var collection = this.config.collection
   var store = this.config.store
   var token = this.config.token
