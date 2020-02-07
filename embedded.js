@@ -139,3 +139,4 @@ collectionEmbed.prototype.loadSDK = function(){
   }
 
 }
+
