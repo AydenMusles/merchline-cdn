@@ -1,9 +1,9 @@
 var collectionEmbed = function(target, config) {
   // Defaults
   this.config = {
-    'collection': null,
-    'store': null,
-    'token': null,
+    'collection': '85623341102',
+    'store': 'musles-apparel.myshopify.com',
+    'token': '789729ba46852f532e4e5e2f7a18c605',
     'customLinkColor': 'inherit',
     'darkBackground': false,
     'openInNewTab': true,
